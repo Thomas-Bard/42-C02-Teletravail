@@ -6,7 +6,7 @@
 /*   By: tbard <tbard@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 14:00:50 by tbard             #+#    #+#             */
-/*   Updated: 2024/08/11 14:00:52 by tbard            ###   ########.fr       */
+/*   Updated: 2024/08/13 12:41:03 by tbard            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,11 @@ char	*ft_strcpy(char *dest, char *src)
 	int	size;
 
 	i = 0;
-	while (i++ < size)
+	size = ft_strlen(src);
+	while (i <= size)
+	{
 		dest[i] = src[i];
+		i++;
+	}
 	return (dest);
 }

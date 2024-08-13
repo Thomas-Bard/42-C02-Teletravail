@@ -54,10 +54,7 @@ void	ft_print_line(void *addr, int remaining_size)
 		j++;
 	}
 	while (j++ < 16)
-	{
-		write(1, "  ", 2);
-		write(1, " ", !(j % 2));
-	}
+		write(1, "   ", 2 + !(j % 2));
 	if (16 <= remaining_size)
 		remaining_size = 16;
 	write(1, " ", !(remaining_size % 2));

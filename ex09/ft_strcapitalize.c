@@ -6,11 +6,9 @@
 /*   By: tbard <tbard@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 14:28:40 by tbard             #+#    #+#             */
-/*   Updated: 2024/08/11 14:50:02 by tbard            ###   ########.fr       */
+/*   Updated: 2024/08/13 12:58:55 by tbard            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
 
 int	ft_is_uppercase(char c)
 {
@@ -26,7 +24,7 @@ int	ft_is_alphanumeric(char c)
 {
 	int	an;
 
-	an = (c >= '0' && c < '9');
+	an = (c >= '0' && c <= '9');
 	an = an || (c >= 'A' && c <= 'Z');
 	an = an || (c >= 'a' && c <= 'z');
 	return (an);
@@ -60,11 +58,12 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 
-/*int main(int argc, char** argv)
+/*
+int main(int argc, char** argv)
 {
 	if (argc != 2)
 		return (1);
-	printf("%s\n", ft_strcapitalize(argv[1]));
+	__builtin_printf("%s\n", ft_strcapitalize(argv[1]));
 	return 0;
 }
 */
